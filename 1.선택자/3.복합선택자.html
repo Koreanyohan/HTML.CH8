@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 제이쿼리 라이브러리 연결 -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $ ( // = $(document).ready()    문서 로드될때 적용
+           // $()의 괄호안에 수행하고 싶은 함수만 넣어주면 된다.
+            function () {
+                $("h1.title") // 복합선택자 => h1태그중에서 title클래스 가지고 있는 태그에 적용
+                .css("background-color", "greyg")
+                .css("border", "2px dashed blue");
+            }
+        );
+        
+    </script>
+</head>
+
+<body>
+    <h1 class="title"> 제목1 </h1>    
+    <h1> 제목2</h1>
+    <h1 class="title"> 제목3 </h1>
+</body>
+
+</html>
+
+
+

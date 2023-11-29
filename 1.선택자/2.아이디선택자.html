@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 제이쿼리 라이브러리 연결 -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $ ( // = $(document).ready()    문서 로드될때 적용
+           // $()의 괄호안에 수행하고 싶은 함수만 넣어주면 된다.
+            function () {
+                $("#title") // id="title"인 태그에 적용
+                .css("background-color", "yellow")
+                .css("border", "2px solid red");
+            }
+        );
+        
+    </script>
+</head>
+
+<body>
+    <h1>제목1</h1>    
+    <h1 id="title"> 제목2</h1>
+    <h1> 제목3 </h1>
+</body>
+
+</html>
+
+
+
