@@ -1,0 +1,79 @@
+<!--p.12-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        function addMember(){
+            // 1.입력필드에서 이름과 나이 꺼내기
+            const input1 = $("#input1").val()
+            const input2 = $("#input2").val()
+
+            // 2. 테이블에 새로운 회원 추가
+            // tr태그 만들기
+            let td1 = "<tr> <td>" + input1 + "</td>"
+            let td2 = "<td>" + input2 + "</td> </tr>"
+              //해설풀이: 백틱이용해서 변수 삽입
+              // =>const tr = `<tr><td> ${name}</td> <td> ${age}</td></tr>`;
+            //테이블에 태그 추가
+            $("table").append(td1 + td2)
+        }
+
+    </script>
+
+
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 15px;
+            text-align: center;
+        }
+        thead {padding-left:10px;}
+    </style>
+
+
+</head>
+
+
+<body>
+    <h3>회원 등록하기</h3>
+    <form action="#">
+        <label for="input1"></label>
+        <input type="text" placeholder="이름 입력" id="input1">
+        <label for="input2"></label>
+        <input type="number" placeholder="나이 입력" id="input2" min="0" max="99">
+        <button onclick="addMember()">새로운 회원 등록</button>
+        <button type="reset">초기화</button>
+    </form>
+
+    <br>
+
+    <table>
+        <caption>회원목록</caption>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+        </tr>
+        <tr>
+            <td>둘리</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>또치</td>
+            <td>18</td>
+        </tr>
+
+    </table>
+
+
+
+
+</body>
+
+</html>

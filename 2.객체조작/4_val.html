@@ -1,0 +1,31 @@
+<!--p.11-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //입력필드에 담긴 값 꺼내기
+            var name = $("#user_name").val(); //val() -> get : 필드의 값 - $("#user_name")
+            console.log(name);
+
+            //입력필드의 값 변경하기
+            $("#user_id").val("admin");  //val (~) -> set : ~값 넣음
+        })
+        
+    </script>
+</head>
+    
+<body>
+    <p>
+        <label for="user_name">이름</label>
+        <input type="text" name="user'name" id="user_name" value = "둘리"> <!--input에 입력한 값 user'name: ~라고 서버에 전송-->
+    </p>
+
+    <p>
+        <label for="user_id">아이디</label>
+        <input type="text" name="user'id" id="user_id" value ="user1">
+    </p>
+</body>
+</html>

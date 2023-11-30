@@ -1,0 +1,40 @@
+<!--p.15-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //입력필드에 포커싱(커서 올림)이 되면 배경을 핑크로 변경
+            $("#user_id, #user_pw").on("focus", function(){
+                $(this).css ({
+                    "background-color" : "pink"
+                    // this = "#user_id, #user_pw"이 on(~)상황
+                });
+            });
+            //입력필드가 포커스아웃 되면 배경을 하늘색으로 변경
+            $("#user_id, #user_pw").on("focusout", function(){
+                $(this).css ({
+                    "background-color" : "aqua"
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <label for="user_id">ID</label>
+        <input type="text" name="user-id" id="user_id">
+    </p>
+    <p>
+        <label for="user_pw">PW</label>
+        <input type="password" name="user-pw" id="user_pw">
+    </p>
+
+</body>
+
+</html>

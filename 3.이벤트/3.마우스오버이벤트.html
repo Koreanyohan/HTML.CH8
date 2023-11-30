@@ -1,0 +1,36 @@
+<!--p.15-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+    $(function(){
+        $(".btn1").hover(function(){
+            $(this).next().css({"background-color":"aqua"}); // this = $(".btn1").hover   즉, .btn1에게 css주겠다.
+        });
+
+        $(".btn2").on("mouseover", function(){// mouseover=hover. on("~", 함수) : ~이벤트상황에 함수 처리하겠다.
+        $(this).next().css({"background-color":"pink"});
+    });
+    }
+    )
+    
+    </script>
+</head>
+
+<body>
+    <p>
+        <button class = "btn1">버튼1</button>
+        <span class="span1">텍스트1</span>
+    </p>
+
+    <p>
+        <button class="btn2">버튼2</button>
+        <span class="span2">텍스트2</span>
+    </p>
+
+</body>
+
+</html>

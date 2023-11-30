@@ -1,0 +1,36 @@
+<!-- ppt p.10 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(
+            function(){ //밑에것들 순차적으로 하나씩 해보기
+                //텍스트 꺼내기
+                const text = $("h2").text();
+                console.log(text);
+
+                //텍스트 변경하기
+                $("h2").text("새로운제목");
+
+                //속성값 꺼내기
+                const value = $(".input1").attr('value');// attr('~') 
+                console.log(value); //input1태그의 'value'값 const value에 저장한거 출력하는 것.
+
+                //속성 변경하기
+                $(".input1").attr('type', 'password'); // attr('~','-')   -> ~속성값이 -로 변경됨
+                
+                //속성 삭제하기
+                $(".input2").removeAttr('disabled');
+         
+         });
+     </script>
+</head>
+
+<body>
+    <h2>제목</h2>
+    <input class="input1" type = "text" value = "1234">
+    <input class="input2" type = "text" value = "abcd" disabled>
+</body>
+</html>

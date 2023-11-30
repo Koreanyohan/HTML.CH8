@@ -1,0 +1,33 @@
+<!-- ppt p.8 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        $(
+            function(){
+                $("#list_1").parent().css("border", "2px dashed red") // 아이디 #list_1인 것의 부모모두에 태그에 적용
+            
+                $("#list_1").siblings().css("color", "blue")
+            }
+        ); //  $ (~) = $(document).ready(~);
+
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>리스트1</li>
+            <ul>
+                <li id="list_1">리스트1-1</li>
+                <li>            리스트1-2</li>
+            </ul>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!--p.15-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+// on 메소드는 태그에 이벤트를 등록함 (click mouseenter mouseout ...)
+        $(function(){
+            $("ul a").on("click", function(){
+                $("ul a").css({"background-color" : "white"
+                });
+                $(this).css({"background-color" : "aqua"})
+                // this는 클릭한 a에만 적용됨.
+                //둘이 순서바꾸니까 흰색만 나옴. 나중에 입력한 태그가 우선권인듯.
+
+            }); // 태그 클릭했을때 함수 실행            
+        }
+
+        )
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+    </ul>
+
+</body>
+
+</html>
