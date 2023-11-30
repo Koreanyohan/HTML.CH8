@@ -8,7 +8,7 @@
     <script>
     $(function(){
         $(".btn1").hover(function(){
-            $(this).next().css({"background-color":"aqua"}); // this = $(".btn1").hover   즉, .btn1에게 css주겠다.
+            $(this).next().css({"background-color":"aqua"}); // this = $(".btn1").hover   즉, .btn1이 hover됬을경우에 .btn1에게 css주겠다.
         });
 
         $(".btn2").on("mouseover", function(){// mouseover=hover. on("~", 함수) : ~이벤트상황에 함수 처리하겠다.
