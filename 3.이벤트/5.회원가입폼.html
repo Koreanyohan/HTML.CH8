@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script defer src = "./register.js"></script> <!--defer : html실행 전에 js선실행-->
+<link rel="stylesheet" href="./register.css">
+</head>
+
+<body>
+    <form action="#" method="post">
+        <!--action ="목적지 서버주소"-->
+        <fieldset>
+            <legend>로그인 정보</legend>
+
+            <ul>
+                <li>
+                    <label for="userid">아이디</label>
+                    <input type="text" id="userid" name="userid" required> <!-- required => 필수값 -->
+                </li>
+                <li>
+                    <label for="pwd1">비밀번호</label>
+                    <input id="pwd1" name="pwd1" type="password" required>
+                </li>
+                <li>
+                    <label for="pwd2">비밀번호 확인</label>
+                    <input id="pwd2" name="pwd2" type="password" required>
+
+                    <span class = "msg"> 두 개의 비밀번호가 일치하지 않습니다. </span>
+
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>개인 정보</legend>
+            <ul>
+                <li>
+                    <label for = "fullname">이름</label>
+                    <input id = "fullname" name = "fullname" type="text" maxlength="5" placeholder ="5자 미만으로 입력">
+                </li>
+                <li>
+                    <label for="level">회원 등급</label>
+                    <input id="level" name ="level" type="text" readonly value="준회원">  <!--readonly = > 수정 불가능함. 비슷한 속성 : disable-->
+                </li>
+            </ul>
+
+            <link rel="stylesheet" href="./register.js">
+        </fieldset>
+
+        <fieldset>
+            <!-- <button type="submit"> 제출 </button> 입력값이 조건들에 다 맞는지 검사함. 예를 들어, required속성의 input란에 입력 안하는 경우 걸림. -->
+
+            <!--비밀번호가 일치하는지 확인하는 버튼-->
+            <button type="button" onclick = "func();"> 제출 </button> <!--onclick은 클릭시에 특정한 코드 실행함.--> 
+            <!--vs type="summit"
+            장점: 내가 원하는대로 짤 수 있음. / 단점 : 유효성 검사를 안함. 아이디required값인데 입력 안해도 오류 메시지 안뜸.-->
+        </fieldset> 
+
+    </form>
+</body>
+
+</html>
